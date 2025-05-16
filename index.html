@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<htm<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Search Bar with Falling Dots</title>
+    <link rel="stylesheet" href="css/cosmic_search.css">
+    <link rel="stylesheet" href="css/falling_dots.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            background-color: #000; 
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            min-height: 100vh;
+            overflow: hidden; 
+            justify-content: flex-start; 
+        }
+
+        header {
+            background-color: #ff9100; 
+            width: 80%; 
+            padding: 15px; 
+            border-radius: 19px;
+            margin-bottom: 20px; 
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        header span {
+            color: white;
+            font-size: 1.5em; 
+            font-family: 'Press Start 2P', monospace; 
+        }
+
+        #search-container {
+            position: relative; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 300px; 
+        }
+
+        #elite-gamez-text {
+            position: absolute;
+            top: -200%; 
+            left: 50%; 
+            transform: translate(-50%, -50%); 
+            font-family: 'Press Start 2P';
+            animation: orangeRedNeon 1.5s ease-in-out infinite alternate;
+            cursor: default;
+            font-size: 2em; 
+            line-height: 1;
+            color: white;
+            pointer-events: none; 
+            z-index: 10; 
+        }
+    </style>
+    <link rel="stylesheet" href="css/neon_text.css">
+</head>
+<body>
+
+    <header>
+        <span>so sigma so far</span>
+    </header>
+
+    <div class="falling-dots-container">
+    </div>
+
+    <div id="search-container">
+        <span id="elite-gamez-text">EliteGamez</span>
+        <div class="nebula"></div>
+        <div class="starfield"></div>
+        <div class="cosmic-dust"></div>
+        <div class="cosmic-dust"></div>
+        <div class="cosmic-dust"></div>
+        <div class="stardust"></div>
+        <div class="cosmic-ring"></div>
+        <div id="main">
+            <input
+                class="input"
+                name="text"
+                type="text"
+                placeholder="Search EliteGamez"
+            />
+            <div id="cosmic-glow"></div>
+            <div class="wormhole-border"></div>
+            <div id="wormhole-icon">
+                <svg
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                    stroke-width="2"
+                    stroke="#a9c7ff"
+                    fill="none"
+                    height="24"
+                    width="24"
+                    viewBox="0 0 24 24"
+                >
+                    <circle r="10" cy="12" cx="12"></circle>
+                    <path
+                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                    ></path>
+                    <path d="M2 12h20"></path>
+                </svg>
+            </div>
+            <div id="search-icon">
+                <svg
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                    stroke-width="2"
+                    stroke="url(#elite-gamez)"
+                    fill="none"
+                    height="24"
+                    width="24"
+                    viewBox="0 0 24 24"
+                >
+                    <circle r="8" cy="11" cx="11"></circle>
+                    <line y2="16.65" x2="16.65" y1="21" x1="21"></line>
+                    <defs>
+                        <linearGradient gradientTransform="rotate(45)" id="elite-gamez">
+                            <stop stop-color="#a9c7ff" offset="0%"></stop>
+                            <stop stop-color="#6e8cff" offset="100%"></stop>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/falling_dots_generator.js"></script>
+
+</body>
+</html>
